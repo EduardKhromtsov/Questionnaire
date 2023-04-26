@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QuestionnaireForm</class>
+ <widget class="QWidget" name="QuestionnaireForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>843</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Опросник</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel
+{
+font-family: сentury gothic;
+font-size: 24px;
+	color: rgb(236, 236, 236);
+}
+
+*{
+font-family: сentury gothic;
+font-size: 14px;
+background-color: rgb(70, 70, 70);
+}
+
+QScrollArea
+{
+border: none;
+}
+
+QScrollBar:vertical
+{
+border: none;
+background-color: rgb(59, 59, 90);
+width: 14px;
+margin: 15px 0 15px 0;
+border-radius: 0px;
+}
+
+QScrollBar::handle:vertical
+{
+background-color: rgb(80, 80, 122);
+min-height: 30px;
+
+}
+
+QScrollBar::handle:vertical:hover
+{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::handle:vertical:pressed
+{
+background-color: rgb(185, 0, 92);
+}
+
+QScrollBar::sub-line:vertical
+{
+border: none;
+background-color: rgb(59, 59, 90);
+height: 15px;
+border-top-left-radius: 7px;
+border-top-right-radius: 7px;
+subcontrol-position: top;
+subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover
+{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::sub-line:vertical:pressed
+{
+background-color: rgb(185, 0, 92);
+}
+
+QScrollBar::add-line:vertical
+{
+border: none;
+background-color: rgb(59, 59, 90);
+height: 15px;
+border-bottom-left-radius: 7px;
+border-bottom-right-radius: 7px;
+subcontrol-position: bottom;
+subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover
+{
+background-color: rgb(255, 0, 127);
+}
+
+QScrollBar::add-line:vertical:pressed
+{
+background-color: rgb(185, 0, 92);
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
+{
+background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
+{
+background: none;
+}
+
+QComboBox
+{
+border: 1px solid #ced4da;
+}
+
+QComboBox::drop-down
+{
+border: 0px;
+}
+
+QComboBox::down-arrow
+{
+image: url(:/images/arrow-down.png);
+width: 10px;
+height: 10px;
+margin-right: 5px;
+}
+
+QComboBox::on
+{
+border: 4px solid #c2dbfe
+}
+
+QComboBox QListView
+{
+font-size: 15px;
+	background-color: rgb(255, 255, 255);
+}
+
+QComboBox QListView::item
+{
+	background-color: rgb(255, 255, 255);
+}
+
+QComboBox QListView::item:hover
+{
+background-color: #1e90ff;
+}
+
+QComboBox QListView::item:selected
+{
+background-color: #1e90ff;
+}
+
+QProgressBar
+{
+background-color: rgb(200, 200, 200);
+color: rgb(170, 85, 127);
+border-style: solid;
+border-radius: 8px;
+text-align: center;
+}
+
+QProgressBar::chunk
+{
+border-radius: 10px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(210, 138, 254, 255), stop:1 rgba(128, 156, 255, 255));
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>70</y>
+     <width>1131</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget
+{
+	background-color: rgb(111, 111, 111);
+}
+
+QComboBox
+{
+	color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>10</y>
+      <width>851</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>837</width>
+       <height>344</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0,0,0,0,0" columnstretch="0,0" columnminimumwidth="0,0">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <property name="leftMargin">
+         <number>8</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <item row="4" column="0">
+         <widget class="QLabel" name="fifthQuestionLabel">
+          <property name="text">
+           <string>5) Оцените интуитивность интерфейса:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="eighthQuestionLabel">
+          <property name="text">
+           <string>8) Оцените соотношение цены/качества CRM-системы:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="secondQuestionComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>отлично</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>хорошо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>плохо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>очень плохо</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QComboBox" name="eighthQuestionComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>отлично</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>хорошо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>плохо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>очень плохо</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="seventhQuestionLabel">
+          <property name="text">
+           <string>7) Оцените качество выходящих обновлений для системы:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="sixthQuestionLabel">
+          <property name="text">
+           <string>6) Оцените влияние внедрения системы на рост продаж:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="fourthQuestionComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>отлично</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>хорошо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>плохо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>очень плохо</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QComboBox" name="sixthQuestionComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>отлично</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>хорошо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>плохо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>очень плохо</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QComboBox" name="fifthQuestionComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>отлично</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>хорошо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>плохо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>очень плохо</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="firstQuestionComboBox">
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>отлично</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>хорошо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>плохо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>очень плохо</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <widget class="QLabel" name="tenthQuestionLabel">
+          <property name="text">
+           <string>10) Дайте общую оценку качества CRM-системы LeaderTask:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QComboBox" name="seventhQuestionComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>отлично</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>хорошо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>плохо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>очень плохо</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="firstQuestionLabel">
+          <property name="text">
+           <string>1) Оцените удобство пользования CRM-системой LeaderTask:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="secondQuestionLabel">
+          <property name="text">
+           <string>2) Оцените дизайн CRM-системы LeaderTask:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="thirdQuestionLabel">
+          <property name="text">
+           <string>3) Дайте оценку функционалу CRM-системы LeaderTask:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="fourthQuestionLabel">
+          <property name="text">
+           <string>4) Дайте оценку быстродействию CRM-системы LeaderTask:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QComboBox" name="ninthQuestionComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>отлично</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>хорошо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>плохо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>очень плохо</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="thirdQuestionComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>отлично</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>хорошо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>плохо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>очень плохо</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="9" column="1">
+         <widget class="QComboBox" name="tenthQuestionComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>отлично</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>хорошо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>плохо</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>очень плохо</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="ninthQuestionLabel">
+          <property name="text">
+           <string>9) Оцените легкость освоения функционала CRM-системы:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QProgressBar" name="progressBar">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>821</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">*
+{
+	
+	
+	color: rgb(57, 57, 57);
+}</string>
+   </property>
+   <property name="maximum">
+    <number>10</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sendAnswersButton">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>380</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>сentury gothic</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background: red;
+border-radius: 60px;
+font-family: сentury gothic;
+font-size: 24px;
+color: white;
+border-radius: 15px;
+}
+
+QPushButton:hover
+{
+color: #333;
+border-radius: 15px;
+background: #49ebff;
+}</string>
+   </property>
+   <property name="text">
+    <string>Отправить</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clearButton">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>380</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+background: red;
+border-radius: 60px;
+font-family: сentury gothic;
+font-size: 24px;
+color: white;
+border-radius: 15px;
+}
+
+QPushButton:hover
+{
+color: #333;
+border-radius: 15px;
+background: #49ebff;
+}</string>
+   </property>
+   <property name="text">
+    <string>Очистить</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="wishesLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>320</y>
+     <width>821</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="toolTip">
+    <string notr="true"/>
+   </property>
+   <property name="toolTipDuration">
+    <number>-1</number>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit
+{
+font: 16pt;
+background: transparent;
+border: none;
+color: #e6e6e6;
+border-bottom: 1px solid #717072;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="maxLength">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>Пожелания (не более 100 символов)</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

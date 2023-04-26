@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginForm</class>
+ <widget class="QWidget" name="LoginForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>536</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Вход</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>536</width>
+     <height>628</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">*{
+font-family: сentury gothic;
+font-size: 24px;
+background-color: rgb(70, 70, 70);
+}
+
+QLineEdit
+{
+background: transparent;
+border: none;
+color: #e6e6e6;
+border-bottom: 1px solid #717072;
+}
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLineEdit" name="nameLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>140</y>
+      <width>251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="toolTip">
+     <string notr="true"/>
+    </property>
+    <property name="toolTipDuration">
+     <number>-1</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>25</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>Имя</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imageLabel">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>111</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+	background-color: red;
+	border-radius: 50px;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="res.qrc">:/images/user.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="telephoneNumberLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>200</y>
+      <width>251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="inputMask">
+     <string>+7 000-000-00-00</string>
+    </property>
+    <property name="text">
+     <string>+7 ---</string>
+    </property>
+    <property name="maxLength">
+     <number>16</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>Номер телефона</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="passwordLineEdit">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>480</y>
+      <width>251</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>35</number>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Пароль (для админа)</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="setAdminModeCheckBox">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox
+{
+font-size: 25px;
+color: #717072
+}
+
+QCheckBox::indicator
+{
+width: 25px;
+height: 25px;
+}
+
+QCheckBox:hover
+{
+color: #f8f8f8;
+}
+
+QCheckBox::indicator:unchecked
+{
+image: url(:/images/unchecked_checkbox.png);
+}
+
+QCheckBox::indicator:checked
+{
+image: url(:/images/checked_checkbox.png);
+}
+
+QCheckBox::indicator:unchecked:hover, QCheckBox::indicator:unchecked:pressed
+{
+	image: url(:/images/unchecked_checkbox_hover.png);
+}
+
+QCheckBox::indicator:checked:hover, QCheckBox::indicator:checked:pressed
+{	
+	image: url(:/images/checked_checkbox_hover.png);
+}</string>
+    </property>
+    <property name="text">
+     <string>AdminMode</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="correctnessStatusTelephoneLineEditLabel">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>205</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="correctnessStatusNameLineEditLabel">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>145</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loginPushButton">
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>560</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background: red;
+border-radius: 60px;
+font-family: сentury gothic;
+font-size: 24px;
+color: white;
+border-radius: 15px;
+}
+
+QPushButton:hover
+{
+color: #333;
+border-radius: 15px;
+background: #49ebff;
+}</string>
+    </property>
+    <property name="text">
+     <string>Вход</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="infoAboutCompanyGroupBox">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>320</y>
+      <width>401</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*
+{
+color: #e6e6e6;
+font-size: 16px;
+}
+
+</string>
+    </property>
+    <property name="title">
+     <string>Сведения об организации</string>
+    </property>
+    <widget class="QLineEdit" name="companyNameLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>341</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::ClickFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string notr="true"/>
+     </property>
+     <property name="toolTipDuration">
+      <number>-1</number>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="maxLength">
+      <number>35</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Название организации</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="fieldOfCompanyLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>341</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::ClickFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string notr="true"/>
+     </property>
+     <property name="toolTipDuration">
+      <number>-1</number>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="maxLength">
+      <number>35</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Сфера деятельности</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QCheckBox" name="isTheOrganizationCheckBox">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>148</x>
+      <y>270</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox
+{
+font-size: 16px;
+color: #717072
+}
+
+QCheckBox::indicator
+{
+width: 25px;
+height: 25px;
+}
+
+QCheckBox:hover
+{
+color: #f8f8f8;
+}
+
+QCheckBox::indicator:unchecked
+{
+image: url(:/images/unchecked_checkbox.png);
+}
+
+QCheckBox::indicator:checked
+{
+image: url(:/images/checked_checkbox.png);
+}
+
+QCheckBox::indicator:unchecked:hover, QCheckBox::indicator:unchecked:pressed
+{
+	image: url(:/images/unchecked_checkbox_hover.png);
+}
+
+QCheckBox::indicator:checked:hover, QCheckBox::indicator:checked:pressed
+{	
+	image: url(:/images/checked_checkbox_hover.png);
+}</string>
+    </property>
+    <property name="text">
+     <string>Юридическое лицо</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

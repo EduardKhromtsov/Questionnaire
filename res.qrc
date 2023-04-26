@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/user.png</file>
+        <file>images/unchecked_checkbox.png</file>
+        <file>images/checked_checkbox.png</file>
+        <file>images/checked_checkbox_hover.png</file>
+        <file>images/unchecked_checkbox_hover.png</file>
+        <file>images/x-button.png</file>
+        <file>images/correct.png</file>
+        <file>images/Leadertask-logo.png</file>
+        <file>images/pic.png</file>
+        <file>images/form.png</file>
+        <file>images/database.png</file>
+        <file>images/graph.png</file>
+        <file>images/arrow-down.png</file>
+        <file>images/printing.png</file>
+        <file>images/search.png</file>
+    </qresource>
+</RCC>
